@@ -20,7 +20,7 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "/auth/google/callback",
+      callbackURL: keys.googleCallBackUrl,
     },
     (accessToken, refreshToken, profile, done) => {
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {
